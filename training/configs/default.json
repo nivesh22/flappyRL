@@ -1,0 +1,28 @@
+{
+  "environment": {
+    "width": 400,
+    "height": 600,
+    "ground_y": 520,
+    "pipe_gap": 120,
+    "pipe_speed": 3.0,
+    "gravity": 0.45,
+    "flap_strength": -7.5,
+    "state_dim": 5,
+    "action_dim": 2,
+    "rewards": {
+      "survive_step": 0.1,
+      "pass_pipe": 1.0,
+      "collision": -10.0
+    }
+  },
+  "architectures": {
+    "tiny_dqn": [8],
+    "small_dqn": [32],
+    "medium_dqn": [64, 32],
+    "deep_dqn": [128, 64, 32]
+  },
+  "evaluation": {
+    "seeds": [101, 202, 303, 404, 505, 606, 707, 808, 909, 1010],
+    "max_steps": 3000
+  }
+}
